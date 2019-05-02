@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+
+<th:block th:fragment="header(title)" id="Header1">
+    <meta charset="UTF-8" />
+    <title th:text="'Spring Adlister | ' + ${title}"></title>
+    <link rel="stylesheet" href="/css/style.css" />
+</th:block>
+
+</body>
+</html>

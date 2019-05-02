@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="fragments/head :: header('Home')"/>
+</head>
+<body>
+
+<h1>Hello, <span th:text="${username}">this text is replaced</span></h1>
+
+<div th:if="${admin}">
+    <li th:if="${admin}"></li>
+    <li th:if="${admin}"></li>
+    <li th:if="${admin}"></li>
+</div>
+<button th:if="${admin}">Grade students</button>
+
+
+<ul>
+    <li th:each="name : ${names}">
+        <a href="#" th:text="${name}"></a>
+    </li>
+</ul>
+
+
+</body>
