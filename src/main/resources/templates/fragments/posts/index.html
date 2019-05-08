@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="fragments/head :: header('Play Dice Game')"/>
+</head>
+
+<body>
+<th:block th:replace="fragments/navbar" />
+
+<h2>List of Posts</h2>
+
+<ul>
+    <li th:each="item : ${posts}">
+        <a th:href="@{'/posts/'+${item.getId()}}"> <h3 th:text="${item.title}"></h3></a>
+        <p th:text="${item.body}"></p>
+    </li>
+</ul>
+</body>
+</html>
