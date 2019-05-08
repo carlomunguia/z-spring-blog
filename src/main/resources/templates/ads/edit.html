@@ -8,9 +8,11 @@
 <th:block th:replace="fragments/navbar" />
 
 <h2>Edit Post</h2>
-<form method="post" th:action="@{'/posts/'+${post.id}+'/edit'}">
-    <label for="title">Title</label><input type="text" name="title" id="title" th:value="${post.title}"/>
-    <label for="body">Body</label><textarea name="body" id="body" th:field="${post.body}"/>
+<form method="post" th:action="@{'/posts/'+${post.id}+'/edit'}" th:object="${post}">
+    <label for="title">Title</label>
+    <input type="text" th:field="*{title}"/>
+    <label for="body">Body</label>
+    <textarea th:field="" "/>
     <input name="id" type="hidden" th:value="${post.id}"/>
     <button>Submit</button>
 </form>
